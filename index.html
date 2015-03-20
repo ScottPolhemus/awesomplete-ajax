@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AJAX Awesomplete</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+    <script src="build/awesomplete-ajax.js"></script>
+    <script>
+      window.onload = function() {
+        var searchBox = document.querySelector('.awesomplete-ajax input');
+        var ajaxAwesome = new Awesomplete(searchBox);
+
+        ajaxAwesome.ajaxUrl = 'http://gd.geobytes.com/AutoCompleteCity';
+      }
+    </script>
+  </head>
+  <body>
+  <label class="awesomplete-ajax">
+    <input type="search" placeholder="Search cities..." />
+  </label>
+  </body>
+</html>

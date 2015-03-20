@@ -1,0 +1,20 @@
+{
+  "name": "awesomplete-ajax",
+  "version": "1.0.0",
+  "authors": [
+    "Scott Polhemus <scott.polhemus@barrelny.com>"
+  ],
+  "description": "Extends the Awesomplete JS module to support AJAX suggestions",
+  "main": "src/awesomplete-ajax.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "awesomplete": "LeaVerou/awesomplete#gh-pages"
+  }
+}
