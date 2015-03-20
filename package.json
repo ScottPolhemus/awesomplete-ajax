@@ -17,7 +17,6 @@
     "awesomplete": "./bower_components/awesomplete/awesomplete.js"
   },
   "browserify-shim": {
-    "jquery": "global:jQuery",
-    "underscore": "global:_"
+    "jquery": "global:jQuery"
   }
 }

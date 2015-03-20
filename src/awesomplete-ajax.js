@@ -5,7 +5,6 @@
 
 var AwesompleteAJAX = require('awesomplete');
 var jQuery = require('jquery');
-var underscore = require('underscore');
 
 // Save the original evaluate method
 var evaluateList = AwesompleteAJAX.prototype.evaluate;
@@ -46,7 +45,11 @@ AwesompleteAJAX.prototype.ajaxLoad = function() {
 
 // Add AJAX-ed terms to list and re-evaluate
 AwesompleteAJAX.prototype.ajaxParse = function(data) {
-  this._list = underscore.union(this._list, data);
+  for(var i = 0; i < data.length; i++) {
+    if(this._list.indexOf(data[i]) === -1) {
+      this._list.push(data[i]);
+    }
+  }
 
   // Evaluate again with the updated list
   this.evaluateList();
